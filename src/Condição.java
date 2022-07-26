@@ -9,6 +9,7 @@ public class Condição{
     }
         else{
             return "Comprometimento atual "+ Integer.toString(Atual)+"/100";
+        
         }
     }
 }
