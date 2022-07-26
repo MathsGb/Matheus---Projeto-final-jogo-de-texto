@@ -8,7 +8,7 @@ public class Condição{
         return "Saúde atual "+ Integer.toString(Atual)+"/100";
     }
         else{
-            return "Comprometimento atual "+ Integer.toString(Atual)+"/100";
+            return "Comprometimento atual "+ Integer.toString(Atual)+"/100" + Atual  ;
         
         }
     }
