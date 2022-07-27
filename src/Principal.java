@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class Principal{
     public static void main(String[] args){
@@ -6,7 +5,7 @@ public class Principal{
         Scanner entrada = new Scanner(System.in);
 
         // Entrada e explicação
-        System.out.println("Nesse jogo voce deverá escolher agentes antes de iniciar, tenha em mente que cada um deles tem sua  própria história com seus pontos fortes e fracos.\n");
+        System.out.println("Nesse jogo voce deverá escolher agentes antes de iniciar, tenha em mente que cada um deles tem sua própria história com seus pontos fortes e fracos.\n");
         System.out.print("Pressione Enter para continuar....");
         String pausa1 = pausa.nextLine();
         pausa1.equals("\n");
@@ -51,14 +50,24 @@ public class Principal{
                                 "\nEle pensa um pouco antes de falar, ainda ofegante depois de toda corrida. -...Quer saber, porque não? - Diz enquanto enxuga o suor com uma toalha de carregava em direção a entrada. Agora,"+
                                 " já sentado, ele cumprimenta melhor enquanto pede um cappuchino pra si. \n B: -Serio que a minha caminhada é o 'incomum' toda semana voce tomacafé da manhã em um lugar diferente. \n A: -Se chama "+
                                 "experimentar, odeio comer a mesma coisa sempre, com  a nossa idade é dificil encontrar algo novo comendo o de sempre-  Diz enquanto dá uma risadinha e batendo na barriga.  -E voce porque tá correndo agora,"+
-                                " sei que é meio que seu hobby mas parece um pouco cedo não acha?");
+                                " sei que é meio que seu hobby mas parece um pouco cedo não acha? \n\n          WIP");
 
         }   
         else if(pers.equals("barney")){
             System.out.println("\n-------------- Capítulo 1 --------------\n");
             System.out.println(Condição.CalCond(100,0,1) + " e " +Condição.CalCond(100,0,2));
             System.out.println("\n   Acordar abruptamente sempre foi um saco, como um bebe no útero que é jogado no mundo exterior, voce pensa no cansaço do corpo em como dormir num banco depois de caminhar foi uma péssima ideia, "+
-            "infelizmente nada é melhor pra esvaziar a mente e é exatamente o que eu tô precisando agora. Após um boa esticada é melhor voltar a correria.");
+            "infelizmente nada é melhor pra esvaziar a mente e é exatamente o que eu tô precisando agora. Após um boa esticada é melhor voltar a correria.\n\n Mas antes não sabe qual caminho tomar, se quer passar pelo CENTRO ou volta pro PARQUE?");
+            String perg = entrada.nextLine();
+            perg = perg.toLowerCase();
+            if(perg.equals("centro")){
+                System.out.println("\n                WIP   ");
+
+            }
+            else{
+                System.out.println("Voce volta pra casa e deixa as preucupaçoes no subconsciente.");
+            }
+
         }
         else{
             System.out.println("Entrada inválida por favor recomece ");
