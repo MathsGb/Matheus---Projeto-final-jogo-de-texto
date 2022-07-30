@@ -1,5 +1,22 @@
 import java.util.Scanner;
 public class Principal{
+    public static String Status(int x){
+        if(x == 1){
+            return "O jogo acabou voce não tem mais determinação de continuar a missão.";
+        }
+        else{
+            String result = "Voce está com "+ Integer.toString(x) + "/100 ";
+        return result;
+        }
+    }
+    
+    public static int CalCond( int Atual,int Dano) {
+        Atual = Atual - Dano;
+        if( Atual <= 0 ){
+            return -1;
+        }
+        return Atual;
+    }
     public static void main(String[] args){
         Scanner pausa = new Scanner(System.in);
         Scanner entrada = new Scanner(System.in);
@@ -34,8 +51,8 @@ public class Principal{
         if (pers.equals("alister")){
             int estado = 100;
             System.out.println("\n-------------- Capítulo 1 --------------\n");
-            System.out.println(Condição.CalCond(100,0,1) + " e " +Condição.CalCond(100,0,2));
-            System.out.println("\n   Depois de uma péssima noite de sono, acordar com um cachorro na sua cara é de certa forma reconfortante se não hilário.\n- *** obrigado por me acordar bonitinho, mas sério, bem que podia deixar dormir mais 1 horinha seria incrível.-   Logo após isso o Shiba "+
+            System.out.println(Status(CalCond(estado,0)));
+            System.out.println("\n   Depois de uma péssima noite de sono, acordar com um cachorro na sua cara é de certa forma reconfortante se não hilário.\n- Oo Pingu, obrigado por me acordar bonitinho, mas sério, bem que podia deixar dormir mais 1 horinha seria incrível.-   Logo após isso o Shiba "+
                                 " começa a lamber voce fréneticamente, os pelos branco começam a sair do\n cachorro com todo o movimento da cauda, voce até impediria se não fosse tão fofo.");
             System.out.println("\n -Tá bom, tá bom já chega, assim voce joga sujo e eu tenho que sair lembra?. mas não se preucupa eu trago"+
                                 " algo pra voce mais tarde.-  Indo até o banheiro voce olha o espelho, a barba está um mesclado do preto e grisalho mas ainda não "+
@@ -43,7 +60,7 @@ public class Principal{
             System.out.print("Pressione Enter para continuar....");
             String pausa2 = pausa.nextLine();
             System.out.println("\n Agora já depois de ter trocado de roupa voce sente a sua barriga roncando,acaba lembrando da cafeteria do final da rua, só de pensar no fraphucchino o roncar retorna fortemente."+
-                                "\n - *** eu já vou indo, deixei a commida pro dia e é provável que eu só volte tarde, então não adianda ficar na porta esperando-  Ele dá um giro e se agacha com vontade de brincar -"+
+                                "\n - Pingu eu já vou indo, deixei a comida pro dia e é provável que eu só volte tarde, então não adianda ficar na porta esperando-  Ele dá um giro e se agacha com vontade de brincar -"+
                                 " Mais tarde tá bom.-  Responde fazendo carinho na barriga dele. \n\n Ao chegar na cafeteria voce para o carro no estacionamento, O ar do ambiente chega é aconchegante mesmo sendo tão cedo"+
                                 " pela manhã, voce faz o pedido e fica senta perto da janela aberta com o sol fraco entando, enquanto pensa no próprio cansaço, durante esse momento voce vê Barney passando de na calçada"+
                                 " enquanto estava caminhando. \n\n -Bom dia Barney, me surpreende a sua disposição pra caminhar a essa hora, Quer se juntar a mim?-"+
@@ -55,7 +72,7 @@ public class Principal{
         }   
         else if(pers.equals("barney")){
             System.out.println("\n-------------- Capítulo 1 --------------\n");
-            System.out.println(Condição.CalCond(100,0,1) + " e " +Condição.CalCond(100,0,2));
+            System.out.println(Status(CalCond(100,0)));
             System.out.println("\n   Acordar abruptamente sempre foi um saco, como um bebe no útero que é jogado no mundo exterior, voce pensa no cansaço do corpo em como dormir num banco depois de caminhar foi uma péssima ideia, "+
             "infelizmente nada é melhor pra esvaziar a mente e é exatamente o que eu tô precisando agora. Após um boa esticada é melhor voltar a correria.\n\n Mas antes não sabe qual caminho tomar, se quer passar pelo CENTRO ou volta pro PARQUE?");
             String perg = entrada.nextLine();
@@ -73,7 +90,7 @@ public class Principal{
             System.out.println("Entrada inválida por favor recomece ");
         }
         System.out.println("\nObrigado por jogar!");
-
+        
         entrada.close();
         pausa.close();
     }
