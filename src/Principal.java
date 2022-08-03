@@ -55,6 +55,9 @@ public class Principal{
             String pausa2 = pausa.nextLine();
             pausa2.equals("\n");
             System.out.println(Capitulo.Historia1B);
+            System.out.print("\nPressione Enter para continuar....\n");
+            String pausa3 = pausa.nextLine();
+            pausa3.equals("\n");
             System.out.println(Capitulo.Historia1C);
             System.out.println("-Olhar o CORPO mais atentamente\n-Vanculhar a CASA \n-Procurar HANK\n");
             String per1 = entrada.nextLine();
@@ -63,15 +66,34 @@ public class Principal{
                 if(per1.equals("corpo")){
                 System.out.println(Capitulo.Escolha(1,0,0));
                 System.out.println(Status(CalCond(estado,10)));
+                System.out.print("\nPressione Enter para continuar....\n");
+                String pausa4 = pausa.nextLine();
+                pausa4.equals("\n");
             }
                 else if(per1.equals("casa")){
                 System.out.println(Capitulo.Escolha(0,1,0));
+                System.out.print("\nPressione Enter para continuar....\n");
+                String pausa4 = pausa.nextLine();
+                pausa4.equals("\n");
             }
                 System.out.println(Capitulo.Historia1D);
             }
             else{
+                System.out.println(Capitulo.Escolha3A);
+                System.out.println(Status(CalCond(estado,15)));
 
+                //System.out.print("\nPressione Enter para continuar....\n");
+                //String pausa4 = pausa.nextLine();
+                //pausa4.equals("\n");
+                System.out.println("\n                    Fim do Capitulo 1");
             }
+        }
+        else if(pers.equals("hank")) {
+            System.out.println(Capitulo.Historia2A);
+            System.out.print("\nPressione Enter para continuar....\n");
+            String pausa2 = pausa.nextLine();
+            pausa2.equals("\n");
+            System.out.println(Capitulo.Historia2B);
         }
         entrada.close();
         pausa.close();
