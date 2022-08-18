@@ -3,14 +3,14 @@ public class Agente {
     double altura;
     int idade;
     String especialidade;
-    int estado;
+    static int estado = 100;
 
-    Agente(String nome, double altura, int idade, String especialidade, int estado) {
+    Agente(String nome, double altura, int idade, String especialidade) {
         this.nome = nome;
         this.altura = altura;
         this.idade = idade;
         this.especialidade = especialidade;
-        this.estado = estado;
+        
         ;
     }
 
@@ -19,14 +19,5 @@ public class Agente {
         System.out.println(" " + pessoa.altura + " m de altura");
         System.out.println(" " + pessoa.idade + " anos de idade");
         System.out.println(" É especialista em " + pessoa.especialidade);
-    }
-
-    void Calcond(int x) {
-        this.estado = this.estado - x;
-        if (estado <= 0) {
-            System.out.println("O jogo acabou voce não tem mais forças para continuar a missão.");
-        } else {
-            System.out.println("Voce está com " + estado + "/100 de saúde e recebeu " + x + " de dano.");
-        }
     }
 }

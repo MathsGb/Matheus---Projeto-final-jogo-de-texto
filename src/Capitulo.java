@@ -1,67 +1,54 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
-    // public static String Status(int x){
-    // if(x <= 0){
-    // return "O jogo acabou voce não tem mais forças para continuar a missão.";
-    // }
-    // else{
-    // int y = 100 - x;
-    // String result = "Voce está com "+ Integer.toString(x) + "/100 de saúde e
-    // recebeu " + Integer.toString(y) +" de dano.";
-    // return result;
-    // }
-    // }
-    // public static int CalCond( int Atual,int Dano) {
-    // Atual = Atual - Dano;
-    // if( Atual <= 0 ){
-    // return -1;
-    // }
-    // return Atual;
-    // }
     String nomedocap;
     String historiaA;
     String historiaA2;
-    ArrayList<Escolha> escolhas;
-    String escolha;
-    String escolha2;
-    String escolha3;
-    String personagem;
+    Escolha[] escolhas;
+    Agente personagem;
     Scanner okay;
-    int estado;
+    static int estado = 100;
     Capitulo proximo;
 
-    Capitulo(String nomedocap, String historiaA, String escolha,
-            String escolha2, String escolha3, String pessoa, Capitulo proximo, Scanner okay) {
 
+    Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner okay, Escolha[] escolhas) {
         this.nomedocap = nomedocap;
         this.historiaA = historiaA;
-        this.escolha = escolha;
-        this.escolha2 = escolha2;
-        this.escolha3 = escolha3;
         this.personagem = pessoa;
-        this.proximo = proximo;
-        this.escolhas = new ArrayList<>();
+        this.escolhas = escolhas;
+        
     }
 
     void imprima(Scanner okay){
-        AdicArray(this.escolha);
-        AdicArray(this.escolha2);
-        AdicArray(this.escolha3);
-        System.out.println("    Capitulo - " + this.nomedocap + "\n");
-        System.out.println(this.historiaA);
-        int Ans = okay.nextInt();
-        this.escolhas.get(Ans - 1);
-    }
-
-    void AdicArray(String x){
-        escolhas.add(Escolha(x,this.proximo));
+        if(estado > 0){
+            System.out.print("\n"+ estado + "/100 é sua condição atual");
+            System.out.println("\n\n    Capitulo - " + this.nomedocap + "\n");
+            System.out.println(this.historiaA);
+            int Ans = okay.nextInt();
+            if(this.escolhas != null){
+                for(Escolha escolha : escolhas){
+                    if(escolha.textesc != null && escolha.textesc == this.escolhas[0].textesc){
+                        System.out.println(escolhas[Ans - 1].textesc);
+                        estado = estado - escolhas[Ans - 1].danodeesc;
+                        this.escolhas[0].next.imprima(okay);
+                        break;
+                    }
+                    else if(escolha.textesc != null && escolha.textesc == this.escolhas[1].textesc){
+                        System.out.println(escolhas[Ans - 1].textesc);
+                        this.escolhas[1].next.imprima(okay);
+                        break;
+                    }
+                    else if(escolha.textesc != null && escolha.textesc == this.escolhas[2].textesc){
+                        System.out.println(escolhas[Ans - 1].textesc);
+                        
+                        this.escolhas[3].next.imprima(okay);
+                        break;
+                    }
+                }
+            }
         }
-
-    Escolha Escolha(String escolha4, Capitulo proximo2) {
-        return null;
-    }
-
-
-    }
+        else{
+            System.out.println("Voce não tem força para continuar");
+        }
+  }
+}
