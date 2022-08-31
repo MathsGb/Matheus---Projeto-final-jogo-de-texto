@@ -4,10 +4,9 @@ public class Principal {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        // Entrada e explicação
         String Escolha1B = "Eu sou a 1 escolha da parte 2";
         String Escolha2B = "Eu sou a 2 escolha da parte 2";
-        // String z = "oi";
+
         String Historia1A = "Você acorda, ainda exausto você não consegue ignorar o cachorro que não para de lamber "
                 +" a ponta do seu pé. A: - É garotão hoje vai ser um dia daqueles."
                 +"Atendendo ao chamado como policial investigativo, você é chamado. Ao chegar na cena do crime você e seu parceiro "
@@ -54,8 +53,7 @@ public class Principal {
         Agente Alister = new Agente("Alister",
                 1.90,
                 40,
-                "Investigação e informação"
-                );
+                "Investigação e informação");
 
         Agente.imprima(Alister);
 
