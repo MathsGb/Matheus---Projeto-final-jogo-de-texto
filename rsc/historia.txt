@@ -1,0 +1,5 @@
+CAPITULO
+Nome do capitulo:
+Novos horizontes
+História:
+Você acorda, ainda exausto você não consegue ignorar o cachorro que não para de lamber a ponta do seu pé.\nA: - É garotão hoje vai ser um dia daqueles.\nAtendendo ao chamado como policial investigativo, você é chamado. Ao chegar na cena do crime você e seu parceiro.Hank, que chegará mais cedo, havia muito do que investigar.\n-Você pode olhar o corpo da vítima (1)\n-Procurar na casa(2)\n-Procurar por Hank(3)

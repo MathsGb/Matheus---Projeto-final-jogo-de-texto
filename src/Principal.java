@@ -7,20 +7,21 @@ public class Principal {
 
         Scanner entrada = new Scanner(System.in);
 
-        Leitor Writter = new Leitor();
-        HashMap<String, Agente> characters = Writter.lerPerson("rsc/personagens.txt");
+        Leitor Reader = new Leitor();
+        HashMap<String, Agente> characters = Reader.lerPerson("rsc/personagens.txt");
+        
         
         String Escolha1B = "Eu sou a 1 escolha da parte 2";
         
         String Escolha2B = "Eu sou a 2 escolha da parte 2";
 
-        String Historia1A = "Você acorda, ainda exausto você não consegue ignorar o cachorro que não para de lamber "
-        +" a ponta do seu pé. A: - É garotão hoje vai ser um dia daqueles."
-        +"Atendendo ao chamado como policial investigativo, você é chamado. Ao chegar na cena do crime você e seu parceiro "
-        +"Hank, que chegará mais cedo, havia muito do que investigar."
-        +"\n-Você pode olhar o corpo da Vítima (1)."
-        +"\n-Procurar na casa(2)."
-        +"\n-Procurar por Hank(3)";
+        // String Historia1A = "Você acorda, ainda exausto você não consegue ignorar o cachorro que não para de lamber "
+        // +" a ponta do seu pé. A: - É garotão hoje vai ser um dia daqueles."
+        // +"Atendendo ao chamado como policial investigativo, você é chamado. Ao chegar na cena do crime você e seu parceiro "
+        // +"Hank, que chegará mais cedo, havia muito do que investigar."
+        // +"\n-Você pode olhar o corpo da Vítima (1)."
+        // +"\n-Procurar na casa(2)."
+        // +"\n-Procurar por Hank(3)";
 
                 
         String Escolha1A = "-Alister descobre que ela foi morta com um corte garganta, porém também um corte na barriga "
@@ -29,13 +30,13 @@ public class Principal {
         +"\nLogo após isso você ouve um barulho no andar de cima. Hank estava com o braço cortado com um "
         +"estilete. Ele conta que havia alguém no andar de cima."
         +"\nAlister sente culpa por não estar lá por ele. Você perdeu 10 de constituição.";
-                        
+        
         String Escolha2A = "Ao procurar pelo andar inferior Alistar encontra o celular da vítima. Relutante você "
         +"utiliza sua digital para destravar e descobre conversar com um sujeito em um site."
         +"\nLogo após isso você ouve um barulho no andar de cima. Hank estava com o braço cortado com um "
         +"estilete. Ele conta que havia alguém no andar de cima."
         +"\nAlister sente culpa por não estar lá por ele. Você perdeu 10 de constituição.";;
-                        
+        
         String Escolha3A =  "Subindo as escadas, enquanto chama Hank, você vê ele encarando a porta de um quarto "
         +"enquanto te indica pra fazer silêncio. Ao abrir a porta ele é atacado por alguém, você rapidamente "
         +"afasta o desconhecido mas acaba levando um soco no maxilar, enquanto processa o que aconteceu Hank "
@@ -53,23 +54,25 @@ public class Principal {
         String Fim1 = "Você acompanha Hank até o hospital, não tendo encontrado nada sobre o assassino, "
         +"você resolve passar o caso para outro Agente."
         +"\n\n        Fim!";
-
+        
         String Fim2 = "Eu sou o 2 final";
-
+        
 
         System.out.println("Nesse jogo voce deverá escolher agentes antes de iniciar, tenha em mente que cada um deles tem sua própria história com seus pontos fortes e fracos.\n");
 
         // Criação do personagem
         Agente Alister = characters.get("Alister");
         Agente.imprima(Alister);
-
+        
         Agente Hank = characters.get("Hank");
         Agente.imprima(Hank);
-
+        
+        HashMap<String, Capitulo> Lore = Reader.lerCap("rsc/historia.txt",Alister, entrada);
+        
         // Criação de cada capítulo da história de ambos
-        Capitulo começo1 = new Capitulo("Novos horizontes",Historia1A,Alister,entrada);
-        Capitulo VarianteAlis = new Capitulo("Confronto", Historia2A , Alister , entrada);
-        Capitulo Extra = new Capitulo("Extra", "oii eu sou uma historia",Alister,entrada);
+        Capitulo começo1 = Lore.get("Novos horizontes");
+        Capitulo VarianteAlis = new Capitulo("Confronto", Historia2A , Alister, entrada);
+        Capitulo Extra = new Capitulo("Extra", "oii eu sou uma historia", Alister, entrada);
         Capitulo Final1 = new Capitulo("Final",Fim1,Alister,null);
         Capitulo Final2 = new Capitulo("Final",Fim2,Alister,null);
         Capitulo começo2 = new Capitulo("Novos horizontes","oii eu sou a história de hank",Hank,entrada);
@@ -117,7 +120,6 @@ public class Principal {
         System.out.println("Digite o nome daquele que voce vai escolher?");
         String pers = entrada.nextLine();
         pers = pers.toLowerCase();
-        
 
         // inicio da história
         if (pers.equals("alister")) {

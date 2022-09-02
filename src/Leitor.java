@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,7 +38,42 @@ public class Leitor {
             // TODO Auto-generated catch block
             ErroDeArquivo.printStackTrace();
         }
-
         return person;
+    }
+
+    HashMap<String, Capitulo> lerCap(String caminhoC, Agente person, Scanner informação){
+        HashMap<String, Capitulo> historia = new HashMap<String, Capitulo>();
+        
+        File ArquivoHistoria = new File(caminhoC);
+        try{
+            Scanner scannerleitor = new Scanner(ArquivoHistoria, "UTF-8");
+            
+            String lerNomedoCap = "";
+            String lerhistoria = "";
+            String linha= "";
+            while(scannerleitor.hasNextLine())
+            {
+                while(!linha.equals("CAPITULO"))
+                {
+                    linha = scannerleitor.nextLine();
+                }
+                linha = scannerleitor.nextLine();
+                lerNomedoCap = scannerleitor.nextLine();
+
+                linha = scannerleitor.nextLine();
+                // while(!lerhistoria.equals("END")){
+                //     lerhistoria = scannerleitor.nextLine();
+                //     System.out.println(lerhistoria);
+                // }
+                lerhistoria = scannerleitor.nextLine();
+                historia.put(lerNomedoCap, new Capitulo(lerNomedoCap, lerhistoria, person, informação));
+            }
+            scannerleitor.close();
+        }
+        catch(FileNotFoundException ErroArquivo){
+            ErroArquivo.printStackTrace();
+        }
+        
+        return historia;
     }
 }
