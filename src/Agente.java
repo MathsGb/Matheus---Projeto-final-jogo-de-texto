@@ -1,23 +1,15 @@
 public class Agente {
     String nome;
-    double altura;
-    int idade;
     String especialidade;
-    int estado = 100;
 
-    Agente(String nome, double altura, int idade, String especialidade) {
+    Agente(String nome ,String especialidade) {
         this.nome = nome;
-        this.altura = altura;
-        this.idade = idade;
-        this.especialidade = especialidade;
-        
-        ;
-    }
 
+        this.especialidade = especialidade;
+    }
+    
     static void imprima(Agente pessoa) {
         System.out.println("Agente -- \n Nome: " + pessoa.nome);
-        System.out.println(" " + pessoa.altura + " m de altura");
-        System.out.println(" " + pessoa.idade + " anos de idade");
         System.out.println(" É especialista em " + pessoa.especialidade);
     }
 }

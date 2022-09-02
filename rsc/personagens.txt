@@ -1,0 +1,11 @@
+AGENTE
+Nome:
+Alister
+Especialidade:
+Investigação e informação
+
+AGENTE
+Nome:
+Hank
+Especialidade:
+Combate Corpo a Corpo e Armado
