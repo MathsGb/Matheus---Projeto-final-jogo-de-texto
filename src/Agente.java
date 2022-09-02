@@ -3,7 +3,7 @@ public class Agente {
     double altura;
     int idade;
     String especialidade;
-    static int estado = 100;
+    int estado = 100;
 
     Agente(String nome, double altura, int idade, String especialidade) {
         this.nome = nome;

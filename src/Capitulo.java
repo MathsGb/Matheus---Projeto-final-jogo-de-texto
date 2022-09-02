@@ -11,11 +11,11 @@ public class Capitulo {
     Capitulo proximo;
 
 
-    Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner okay, Escolha[] escolhas) {
+    Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner okay) {
         this.nomedocap = nomedocap;
         this.historiaA = historiaA;
         this.personagem = pessoa;
-        this.escolhas = escolhas;
+
 
     }
 
@@ -36,6 +36,3 @@ public class Capitulo {
         }
   }
 }
-// System.out.println(escolhas[Ans - 1].textesc);
-//                         estado = estado - escolhas[Ans - 1].danodeesc;
-//                         this.escolhas[0].next.imprima(okay);

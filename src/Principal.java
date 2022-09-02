@@ -18,7 +18,9 @@ public class Principal {
         String Fim1 = "Você acompanha Hank até o hospital, não tendo encontrado nada sobre o assassino, "
                 +"você resolve passar o caso para outro Agente."
                 +"\n\n        Fim!";
+                
         String Fim2 = "Eu sou o 2 final";
+        
         
         String Historia2A = "Pouco tempo depois Hank se recupera do ocorrido. Ao analisar os dados, vocês descobrem "
                 +"que o assassino estava se aproximando da vítima por meio de mensagens e conversar frequentes. "
@@ -47,60 +49,54 @@ public class Principal {
                 +"descobrem que ele na verdade erra filho da vítima que estava assustado e que ouviu o que aconteceu "
                 +"com sua mãe.";
 
-        System.out.println(
-                "Nesse jogo voce deverá escolher agentes antes de iniciar, tenha em mente que cada um deles tem sua própria história com seus pontos fortes e fracos.\n");
+        System.out.println("Nesse jogo voce deverá escolher agentes antes de iniciar, tenha em mente que cada um deles tem sua própria história com seus pontos fortes e fracos.\n");
 
         Agente Alister = new Agente("Alister",
-                1.90,
-                40,
-                "Investigação e informação");
+                        1.90,
+                        40,
+                        "Investigação e informação");
 
         Agente.imprima(Alister);
 
         Agente Hank = new Agente("Hank",
-                1.81,
-                38,
-                "Combate corpo a corpo e armado");
-                
+                        1.81,
+                        38,
+                        "Combate corpo a corpo e armado");
+
         Agente.imprima(Hank);
+
+        Capitulo começo1 = new Capitulo("Novos horizontes",Historia1A,Alister,entrada);
+        Capitulo VarianteAlis = new Capitulo("Confronto", Historia2A , Alister , entrada);
+        Capitulo Extra = new Capitulo("Extra", "oii eu sou uma historia",Alister,entrada);
+        Capitulo Final1 = new Capitulo("Final",Fim1,Alister,null);
+        Capitulo Final2 = new Capitulo("Final",Fim2,Alister,null);
+        Capitulo começo2 = new Capitulo("Novos horizontes","oii eu sou a história de hank",Hank,entrada);
         
-        Capitulo Final1 = new Capitulo("Final",Fim1,Alister,null, null);
-        Capitulo Final2 = new Capitulo("Final",Fim2,Alister,null,null);
-
-        Escolha F = new Escolha(Escolha1B, Final2 ,15);
-        Escolha G = new Escolha(Escolha2B, Final2 ,10);
-
-        Escolha[] esc3parte = new Escolha[]{F,G,null};
-        Capitulo Extra = new Capitulo("Extra", "oii eu sou uma historia",Alister,entrada,esc3parte);
-        Escolha D = new Escolha("Eu sou o texto da 1 alternativa", Extra,0);
-        Escolha E = new Escolha("Eu sou o texto da 2 Alternativa", Extra,0);
-        Escolha[] esc2parte = new Escolha[]{D,E,null};
-        Capitulo VarianteAlis = new Capitulo("Confronto", Historia2A , Alister , entrada, esc2parte);
         Escolha A = new Escolha(Escolha1A, Final1, 25);
         Escolha B = new Escolha(Escolha2A, VarianteAlis,10);
         Escolha C = new Escolha(Escolha3A, VarianteAlis, 25);
-        // Escolha G = new Escolha(Escolha3A, VarianteAlis,30);
+        Escolha[] esc1parte = new Escolha[]{A,B,C};
+        começo1.escolhas = esc1parte;
+
+        Escolha D = new Escolha("Eu sou o texto da 1 alternativa", Extra,0);
+        Escolha E = new Escolha("Eu sou o texto da 2 Alternativa", Extra,0);
+        Escolha[] esc2parte = new Escolha[]{D,E,null};
+        VarianteAlis.escolhas = esc2parte;
+
+        Escolha F = new Escolha(Escolha1B, Final2 ,15);
+        Escolha G = new Escolha(Escolha2B, Final2 ,10);
+        Escolha[] esc3parte = new Escolha[]{F,G,null};
+        Extra.escolhas = esc3parte;
+
         System.out.println("Digite o nome daquele que voce vai escolher?");
         String pers = entrada.nextLine();
         pers = pers.toLowerCase();
         
         if (pers.equals("alister")) {
-            Escolha[] esc1parte = new Escolha[]{A,B,C};
-            Capitulo começo = new Capitulo("Novos horizontes",
-                    Historia1A,
-                    Alister,
-                    entrada,
-                    esc1parte);
-            começo.imprima(entrada);
+            começo1.imprima(entrada);
         }
-
         else if (pers.equals("hank")) {
-        //     Capitulo começo = new Capitulo("Novos horizontes",
-        //             Historia1H,
-        //             Hank,
-        //             entrada,
-        //             null);
-        //     começo.imprima(entrada);
+            começo2.imprima(entrada);
         }
 
         entrada.close();
