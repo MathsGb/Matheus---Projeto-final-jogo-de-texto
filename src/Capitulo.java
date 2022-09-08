@@ -1,21 +1,23 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
     String nomedocap;
     String historiaA;
     String historiaA2;
-    Escolha[] escolhas;
+    ArrayList<Escolha> escolhas;
     Agente personagem;
     Scanner Scaneador;
     static int estado = 50;
     Capitulo proximo;
 
 
+
     Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner Scaneador) {
         this.nomedocap = nomedocap;
         this.historiaA = historiaA;
         this.personagem = pessoa;
-
+        this.escolhas = new ArrayList<Escolha>();
 
     }
 
@@ -26,9 +28,9 @@ public class Capitulo {
             System.out.println(this.historiaA);
             if(this.escolhas != null){
                 int Ans = Scaneador.nextInt();
-                System.out.println(escolhas[Ans - 1].textesc);
-                estado = estado - escolhas[Ans - 1].danodeesc;
-                this.escolhas[Ans - 1].next.imprima(Scaneador);
+                System.out.println(escolhas.get(Ans - 1).textesc);
+                estado = estado - escolhas.get(Ans - 1).danodeesc;
+                this.escolhas.get(Ans - 1).next.imprima(Scaneador);
             }
         }
         else{

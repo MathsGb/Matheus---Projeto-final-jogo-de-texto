@@ -42,38 +42,60 @@ public class Leitor {
     }
 
     HashMap<String, Capitulo> lerCap(String caminhoC, Agente person, Scanner informação){
-        HashMap<String, Capitulo> historia = new HashMap<String, Capitulo>();
         
+        HashMap<String, Capitulo> historia = new HashMap<String, Capitulo>();
         File ArquivoHistoria = new File(caminhoC);
         try{
-            Scanner scannerleitor = new Scanner(ArquivoHistoria, "UTF-8");
-            
+            Scanner scannerLeitor = new Scanner(ArquivoHistoria, "UTF-8");
             String lerNomedoCap = "";
             String lerhistoria = "";
-            String linha= "";
-            while(scannerleitor.hasNextLine())
+            String linha = "";
+            
+            while(scannerLeitor.hasNextLine())
             {
-                while(!linha.equals("CAPITULO"))
+                while(!linha.equals("CAPITULO") && !linha.equals("ESCOLHA"))
                 {
-                    linha = scannerleitor.nextLine();
+                    linha = scannerLeitor.nextLine();
                 }
-                linha = scannerleitor.nextLine();
-                lerNomedoCap = scannerleitor.nextLine();
+                if(linha.equals("CAPITULO")){
+                    linha = scannerLeitor.nextLine();
+                    lerNomedoCap = scannerLeitor.nextLine();
+                    linha = scannerLeitor.nextLine();
+                    lerhistoria = scannerLeitor.nextLine();
+                    historia.put(lerNomedoCap, new Capitulo(lerNomedoCap, lerhistoria, person, informação));
+                }
+                else if(linha.equals("ESCOLHA")){
+                    String nomeCapAnterior = "";
+                    String texto = "";
+                    String nomeProximoCap = "";
+                    int danoEscolha = 0;
+                    
+                    linha = scannerLeitor.nextLine();
+                    nomeCapAnterior = scannerLeitor.nextLine();
 
-                linha = scannerleitor.nextLine();
-                // while(!lerhistoria.equals("END")){
-                //     lerhistoria = scannerleitor.nextLine();
-                //     System.out.println(lerhistoria);
-                // }
-                lerhistoria = scannerleitor.nextLine();
-                historia.put(lerNomedoCap, new Capitulo(lerNomedoCap, lerhistoria, person, informação));
+                    linha = scannerLeitor.nextLine();
+                    texto = scannerLeitor.nextLine();
+
+                    linha = scannerLeitor.nextLine();
+                    nomeProximoCap = scannerLeitor.nextLine();
+
+                    linha = scannerLeitor.nextLine();
+                    danoEscolha = Integer.parseInt(scannerLeitor.nextLine());
+                    
+                    historia.get(nomeCapAnterior).escolhas.add(new Escolha(texto, historia.get(nomeProximoCap), danoEscolha));
+                }
             }
-            scannerleitor.close();
+            scannerLeitor.close();
         }
         catch(FileNotFoundException ErroArquivo){
             ErroArquivo.printStackTrace();
         }
-        
         return historia;
     }
+//     HashMap<Capitulo, Escolha> LerEScolha(String caminhoC){
+//         HashMap<Capitulo, Escolha> choice = new HashMap<Capitulo,Escolha>();
+//         File ArquivoHistoria = new File(caminhoC);
+        
+//         return choice;
+//     }
 }
