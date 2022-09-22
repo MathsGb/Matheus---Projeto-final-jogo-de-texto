@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 
 public class Leitor {
     
-    HashMap<String, Agente> lerPerson(String caminhoP){
+    public HashMap<String, Agente> lerPerson(String caminhoP){
 
         HashMap<String, Agente> person = new HashMap<String, Agente>();
         
@@ -41,7 +41,7 @@ public class Leitor {
         return person;
     }
 
-    HashMap<String, Capitulo> lerCap(String caminhoC, Agente person, Scanner informação){
+    public HashMap<String, Capitulo> lerCap(String caminhoC, Agente person, Scanner informação){
         
         HashMap<String, Capitulo> historia = new HashMap<String, Capitulo>();
         File ArquivoHistoria = new File(caminhoC);
@@ -64,6 +64,7 @@ public class Leitor {
                     lerhistoria = scannerLeitor.nextLine();
                     historia.put(lerNomedoCap, new Capitulo(lerNomedoCap, lerhistoria, person, informação));
                 }
+
                 else if(linha.equals("ESCOLHA")){
                     String nomeCapAnterior = "";
                     String texto = "";
@@ -82,7 +83,7 @@ public class Leitor {
                     linha = scannerLeitor.nextLine();
                     danoEscolha = Integer.parseInt(scannerLeitor.nextLine());
                     
-                    historia.get(nomeCapAnterior).escolhas.add(new Escolha(texto, historia.get(nomeProximoCap), danoEscolha));
+                    historia.get(nomeCapAnterior).adicionaEscolha(new Escolha(texto, historia.get(nomeProximoCap), danoEscolha));
                 }
             }
             scannerLeitor.close();
@@ -92,10 +93,4 @@ public class Leitor {
         }
         return historia;
     }
-//     HashMap<Capitulo, Escolha> LerEScolha(String caminhoC){
-//         HashMap<Capitulo, Escolha> choice = new HashMap<Capitulo,Escolha>();
-//         File ArquivoHistoria = new File(caminhoC);
-        
-//         return choice;
-//     }
 }

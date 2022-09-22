@@ -2,39 +2,40 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Capitulo {
-    String nomedocap;
-    String historiaA;
-    String historiaA2;
-    ArrayList<Escolha> escolhas;
-    Agente personagem;
-    Scanner Scaneador;
-    static int estado = 50;
-    Capitulo proximo;
+    private String nomedocap;
+    private String historiaA;
+    private ArrayList<Escolha> escolhas;
+    private Agente personagem;
+    private Scanner Scaneador;
+    private static int estado = 50;
+    private Capitulo proximo;
 
 
-
-    Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner Scaneador) {
+    public Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner Scaneador) {
         this.nomedocap = nomedocap;
         this.historiaA = historiaA;
         this.personagem = pessoa;
         this.escolhas = new ArrayList<Escolha>();
-
     }
-
-    void imprima(Scanner Scaneador){
+    
+    public void imprima(Scanner Scaneador){
         if(estado > 0 && Scaneador != null){
             System.out.print("\n"+ estado + "/50 é sua condição atual");
             System.out.println("\n - Capitulo - " + this.nomedocap + "\n");
             System.out.println(this.historiaA);
-            if(this.escolhas != null){
+            if(this.escolhas.size() != 0){
                 int Ans = Scaneador.nextInt();
-                System.out.println(escolhas.get(Ans - 1).textesc);
-                estado = estado - escolhas.get(Ans - 1).danodeesc;
-                this.escolhas.get(Ans - 1).next.imprima(Scaneador);
+                System.out.println(escolhas.get(Ans - 1).getTextEsc());
+                estado = estado - escolhas.get(Ans - 1).getDanodeEscolha();
+                this.escolhas.get(Ans - 1).getNext().imprima(Scaneador);
             }
         }
         else{
             System.out.println("\nNão há mais como continuar.");
         }
+  }
+
+  public void adicionaEscolha(Escolha escolha){
+    this.escolhas.add(escolha);
   }
 }

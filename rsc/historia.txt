@@ -33,6 +33,12 @@ Interludio
 História:
 Eu sou o Capitulo extra pfv escolha 1 ou 2.
 
+CAPITULO
+Nome do Capitulo:
+Introdução
+História:
+Eu sou a história de Hank
+
 ESCOLHA
 Capitulo Anterior:
 Novos horizontes
@@ -81,4 +87,4 @@ Eu sou a escolha 2 do capitulo Preparacao
 Proximo Capitulo:
 Confronto
 Dano de escolha:
-30
+-30

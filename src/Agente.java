@@ -1,14 +1,14 @@
 public class Agente {
-    String nome;
-    String especialidade;
+    private String nome;
+    private String especialidade;
 
-    Agente(String nome ,String especialidade) {
+    public Agente(String nome ,String especialidade) {
         this.nome = nome;
 
         this.especialidade = especialidade;
     }
     
-    static void imprima(Agente pessoa) {
+    public static void imprima(Agente pessoa) {
         System.out.println("Agente -- \n Nome: " + pessoa.nome);
         System.out.println(" É especialista em " + pessoa.especialidade);
     }
