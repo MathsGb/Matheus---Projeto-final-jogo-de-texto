@@ -57,7 +57,10 @@ public class Leitor {
                 linha = scannerLeitor.nextLine();
             }
             if(linha.equals("CAPITULO")){
-                LerCapitulos(person, informação, historia, scannerLeitor);
+                Capitulo BaseCap = new Capitulo(person, informação, historia, scannerLeitor);
+
+                historia.put(BaseCap.getNome(),BaseCap);
+
                 linha = "";
             }
 
@@ -77,29 +80,29 @@ public class Leitor {
         return historia;
     }
 
-    private void LerCapitulos(Agente person,
-                            Scanner informação,
-                            HashMap<String, Capitulo> historia,
-                            Scanner scannerLeitor)
-        {
+    // private void LerCapitulos(Agente person,
+    //                         Scanner informação,
+    //                         HashMap<String, Capitulo> historia,
+    //                         Scanner scannerLeitor)
+    //     {
         
-        String linha;
-        String lerNomedoCap;
-        String lerhistoria;
+    //     String linha;
+    //     String lerNomedoCap;
+    //     String lerhistoria;
         
-        linha = scannerLeitor.nextLine();
-        lerNomedoCap = scannerLeitor.nextLine();
-        linha = scannerLeitor.nextLine();
-        lerhistoria = scannerLeitor.nextLine();
-        historia.put(lerNomedoCap, new Capitulo(lerNomedoCap, lerhistoria, person, informação));
-        // String paragrafo;
-        // while(!lerhistoria.equals("END")) // Compilar o texto da história em parágrafos
-        // {
-        //     paragrafo += lerhistoria + "\n";
-        //     lerhistoria = scannerLeitor.nextLine();
-        // }
-        // paragrafo = "";
-    }
+    //     linha = scannerLeitor.nextLine();
+    //     lerNomedoCap = scannerLeitor.nextLine();
+    //     linha = scannerLeitor.nextLine();
+    //     lerhistoria = scannerLeitor.nextLine();
+    //     historia.put(lerNomedoCap, new Capitulo(lerNomedoCap, lerhistoria, person, informação));
+    //     // String paragrafo;
+    //     // while(!lerhistoria.equals("END")) // Compilar o texto da história em parágrafos
+    //     // {
+    //     //     paragrafo += lerhistoria + "\n";
+    //     //     lerhistoria = scannerLeitor.nextLine();
+    //     // }
+    //     // paragrafo = "";
+    // }
 
     private void LerEscolha(HashMap<String, Capitulo> historia, Scanner scannerLeitor)
     {
