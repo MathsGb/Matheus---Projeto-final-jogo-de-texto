@@ -4,7 +4,6 @@ public class Agente {
 
     public Agente(String nome ,String especialidade) {
         this.nome = nome;
-
         this.especialidade = especialidade;
     }
     

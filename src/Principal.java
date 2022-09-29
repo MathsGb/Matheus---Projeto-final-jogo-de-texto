@@ -15,11 +15,12 @@ public class Principal {
         // Criação do personagem
         Agente Alister = characters.get("Alister");
         Agente.imprima(Alister);
+
         Agente Hank = characters.get("Hank");
         Agente.imprima(Hank);
-
+        
         HashMap<String, Capitulo> Lore = Reader.lerCap("rsc/historia.txt",Alister, entrada);
-
+        
         // Criação de cada capítulo da história de ambos
         Capitulo começo1 = Lore.get("Novos horizontes");
         Capitulo começo2 = Lore.get("Introdução");
@@ -28,12 +29,20 @@ public class Principal {
         String pers = entrada.nextLine();
         pers = pers.toLowerCase();
 
+        // if(!pers.equals("alister") || !pers.equals("hank")){
+        //     System.out.println("Por favor, Escolha um personagem válido:");
+        //     pers = entrada.nextLine();
+        //     pers = pers.toLowerCase();
+        // }
+
         // Inicio da história
         if (pers.equals("alister")){
             começo1.imprima(entrada);
         }
+
         else if (pers.equals("hank")){
             começo2.imprima(entrada);
+
         }
 
         entrada.close();

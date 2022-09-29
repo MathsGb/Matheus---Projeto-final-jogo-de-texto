@@ -5,10 +5,10 @@ public class Capitulo {
     private String nomedocap;
     private String historiaA;
     private ArrayList<Escolha> escolhas;
-    private Agente personagem;
-    private Scanner Scaneador;
+    Agente personagem;
+    Scanner Scaneador;
     private static int estado = 50;
-    private Capitulo proximo;
+    Capitulo proximo;
 
 
     public Capitulo(String nomedocap, String historiaA, Agente pessoa, Scanner Scaneador) {
@@ -16,6 +16,7 @@ public class Capitulo {
         this.historiaA = historiaA;
         this.personagem = pessoa;
         this.escolhas = new ArrayList<Escolha>();
+
     }
     
     public void imprima(Scanner Scaneador){
@@ -33,9 +34,12 @@ public class Capitulo {
         else{
             System.out.println("\nNão há mais como continuar.");
         }
-  }
+    }
+    
 
-  public void adicionaEscolha(Escolha escolha){
-    this.escolhas.add(escolha);
-  }
+
+    public void adicionaEscolha(Escolha escolha)
+    {
+        this.escolhas.add(escolha);
+    }
 }

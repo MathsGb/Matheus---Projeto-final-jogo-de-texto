@@ -1,90 +1,111 @@
 CAPITULO
-Nome do capitulo:
+Nome do CAPITULO:
 Novos horizontes
 História:
-Atendendo ao chamado como policial investigativo, você é convocado. Ao chegar na cena do crime você e seu parceiro.Hank, que chegará mais cedo, havia muito do que investigar.-Você pode olhar o corpo da vítima (1)-Procurar na casa(2)-Procurar por Hank(3)
+Atendendo ao chamado como policial investigativo, você é convocado. Ao chegar na cena do crime você e seu parceiro.Hank, que chegará mais cedo, havia muito do que investigar. -Você pode olhar o corpo da vítima (1) -Procurar na casa(2) -Procurar por Hank(3)
 
 CAPITULO
-Nome do Capitulo:
+Nome do CAPITULO:
 Preparacao
 História:
-Pouco tempo depois Hank se recupera do ocorrido. Ao analisar os dados, vocês descobrem que o assassino estava se aproximando da vítima por meio de mensagens e conversar frequentes. Não  se sabe ainda por que ele fez isso, mas Hank surge com uma ideia. Vocês poderiam criar uma conta fake e tentar se encontrar com ele(1) Ou tentar rastrear onde ele mora(2).
+Pouco tempo depois Hank se recupera do ocorrido. Ao analisar os dados, vocês descobrem que o assassino estava se aproximando da vítima por meio de mensagens e conversar frequentes.Não se sabe ainda por que ele fez isso, mas Hank surge com uma ideia. -Você escuta a Hank(1) -Sugerir ir falar com o legista sobre os ferimentos da vítima(2)
 
 CAPITULO
-Nome do Capitulo:
+Nome do CAPITULO:
 Confronto
 História:
+O legista começa a fugir, mesmo vocês o seguindo ele ainda está muito a frente. Continuar seguindo com Hank(1) Mudar pra outra rota e tentar cercá-lo(2)
 
 CAPITULO
-Nome do Capitulo:
+Nome do CAPITULO:
 Final 1
 História:
-Você acompanha Hank até o hospital, não tendo encontrado nada sobre o assassino,você resolve passar o caso para outro Agente. Fim!
+Você acompanha Hank até o hospital, não tendo encontrado nada sobre o assassino, você resolve passar o caso para outro Agente.Fim!
 
 CAPITULO
-Nome do Capitulo:
+Nome do CAPITULO:
 Final 2
 História:
-Eu sou o 2 fim
+Tendo o capturado, voce sente alívio de saber que o filho da mulher ainda poderá descansar em paz. Agora só restava voltar a rotina normal. Fim!
 
 CAPITULO
-Nome do Capitulo:
-Interludio
+Nome do CAPITULO:
+Final 3
 História:
-Eu sou o Capitulo extra pfv escolha 1 ou 2.
+Ele consegue fugir, derrotado voce não sente que fez as escolhas certas até agora. Não lhe resta mais nada a não ser continuar até que ele pague por ter destruido aquela família.Fim!
 
 CAPITULO
-Nome do Capitulo:
+Nome do CAPITULO:
 Introdução
 História:
 Eu sou a história de Hank
 
 ESCOLHA
-Capitulo Anterior:
+CAPITULO ANTERIOR:
 Novos horizontes
-Texto:
--Alister descobre que ela foi morta com um corte garganta, porém também um corte na barriga como se algo tivesse sido tirado. A cena forte deixa Allister desconfortável e enojado com algo tão cruel.Você perdeu 15 de constituição. Logo após isso você ouve um barulho no andar de cima. Hank estava com o braço cortado com um estilete. Ele conta que havia alguém no andar de cima.Alister sente culpa por não estar lá por ele. Você perdeu 10 de constituição.Ao procurar pelo andar inferior Alistar encontra o celular da vítima. Relutante você utiliza sua digital para destravar e descobre conversar com um sujeito em um site.Logo após isso você ouve um barulho no andar de cima. Hank estava com o braço cortado com um estilete. Ele conta que havia alguém no andar de cima. Alister sente culpa por não estar lá por ele. Você perdeu 10 de constituição.
-Proximo Capitulo:
+TEXTO:
+-Alister descobre que ela foi morta com um corte garganta, porém também um corte na barriga como se algo tivesse sido tirado. A cena forte deixa Allister desconfortável e enojado com algo tão cruel.Você perdeu 15 de constituição. Logo após isso você ouve um barulho no andar de cima. Hank estava com o braço cortado com um estilete. Ele conta que havia alguém no andar de cima.Alister sente culpa por não estar lá por ele. Você perdeu 10 de constituição.
+PROXIMO CAPITULO:
 Final 1
-Dano de escolha:
+DANO DE ESCOLHA:
 25
 
 ESCOLHA
-Capitulo Anterior:
+CAPITULO ANTERIOR:
 Novos horizontes
-Texto:
+TEXTO:
 Ao procurar pelo andar inferior Alistar encontra o celular da vítima. Relutante você utiliza sua digital para destravar e descobre conversar com um sujeito em um site.Logo após isso você ouve um barulho no andar de cima. Hank estava com o braço cortado com um estilete. Ele conta que havia alguém no andar de cima. Alister sente culpa por não estar lá por ele. Você perdeu 10 de constituição.
-Proximo Capitulo:
+PROXIMO CAPITULO:
 Preparacao
-Dano de escolha:
+DANO DE ESCOLHA:
 10
 
 ESCOLHA
-Capitulo Anterior:
+CAPITULO ANTERIOR:
 Novos horizontes
-Texto:
-Subindo as escadas, enquanto chama Hank, você vê ele encarando a porta de um quarto enquanto te indica pra fazer silêncio. Ao abrir a porta ele é atacado por alguém, você rapidamente afasta o desconhecido mas acaba levando um soco no maxilar, enquanto processa o que aconteceu Hank consegue imobilizar a pessoa. Você perdeu 25 de constituição. Após isso vocês o interrogam e descobrem que ele na verdade erra filho da vítima que estava assustado e que ouviu o que aconteceu com sua mãe.
-Proximo Capitulo:
+TEXTO:
+Subindo as escadas, enquanto chama Hank, você vê ele encarando a porta de um quarto enquanto te indica pra fazer silêncio. Ao abrir a porta ele é atacado por alguém, você rapidamente afasta o desconhecido mas acaba levando um soco no maxilar, enquanto processa o que aconteceu Hank consegue imobilizar a pessoa. Você perdeu 25 de constituição. Após isso vocês o interrogam e descobrem que ele na verdade era filho da vítima que estava assustado e que ouviu o que aconteceu com sua mãe. Hank diz ter encontrado o celular da mãe.
+PROXIMO CAPITULO:
 Preparacao
-Dano de escolha:
+DANO DE ESCOLHA:
 20
 
 ESCOLHA
-Capitulo Anterior:
+CAPITULO ANTERIOR:
 Preparacao
-Texto:
-Eu sou a escolha 1 do capitulo Preparacao
-Proximo Capitulo:
+TEXTO:
+Hank sugere dar mais uma olhada no telefone encontrado durante a vasculha da casa. Nele voces percebem que as últimas mensagens foram a 2 dias atrás, ao olhar por rosto a pessoa que falava com ela era o legista do corpo policial, sendo agora o mais provável de ter cometido.
+PROXIMO CAPITULO:
 Confronto
-Dano de escolha:
+DANO DE ESCOLHA:
+-5
+
+ESCOLHA
+CAPITULO ANTERIOR:
+Preparacao
+TEXTO:
+Ao ir no legista ele parece estar muito tenso. Voce comenta que nunca chegou a ver um tipo de ataque daquele jeito, como cruel e nojeto foi, como se a pessoa tivesse propositalmente retirado a pele dela, ele simplesmente ficou em silêncio, pouco tempo depois Hank chega as pressas apontado a arma para o legista que joga o material cirurgico em voce e começa a correr. Voce perde 15 de constituição.
+PROXIMO CAPITULO:
+Confronto
+DANO DE ESCOLHA:
 15
 
 ESCOLHA
-Capitulo Anterior:
-Preparacao
-Texto:
-Eu sou a escolha 2 do capitulo Preparacao
-Proximo Capitulo:
+CAPITULO ANTERIOR:
 Confronto
-Dano de escolha:
--30
+TEXTO:
+mejidsj
+PROXIMO CAPITULO:
+Final 2
+DANO DE ESCOLHA:
+15
+
+ESCOLHA
+CAPITULO ANTERIOR:
+Confronto
+TEXTO:
+Ao ir no legista ele parece estar muito tenso. Voce comenta que nunca chegou a ver um tipo de ataque daquele jeito, como cruel e nojeto foi, como se a pessoa tivesse propositalmente retirado a pele dela, ele simplesmente ficou em silêncio, pouco tempo depois Hank chega as pressas apontado a arma para o legista que joga o material cirurgico em voce e começa a correr. Voce perde 15 de constituição.
+PROXIMO CAPITULO:
+Final 3
+DANO DE ESCOLHA:
+15
